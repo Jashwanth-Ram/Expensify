@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+:root {
+  --primary-color: #0C0F14; /* main dark color */
+  --secondary-color: #1E242D; /* darker accent color */
+  --tertiary-color: #2D333D; /* lighter accent color */
+  --text-color: #FFFFFF; /* white text color */
+  --link-color: #FBBF24; /* yellow link color */
+}
+body
+{
+    background:var(--secondary-color);
+    color: var(--secondary-color);
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+}
+#logo
+{
+    letter-spacing: 5px;
+    color: rgba(255, 217, 0, 1);
+    text-shadow: 3px 3px 5px black;
+}
+.span1
+{
+    font-size: 2.6rem;
+}
+.container
+{
+    user-select: none;
+    width: 800px;
+    height:600px;
+    background: white;
+    box-shadow:1px 1px 5px ;
+    display: flex;
+}
+#balance
+{
+    margin-top:2%;
+    font-size: 1.8rem;
+    color:green;
+    font-family: sans-serif;
+    letter-spacing:.5px;
+}
+.details
+{
+    background: var(--link-color);
+    padding: 1rem;
+    flex: 1;
+    color: grey;
+}
+
+.inc-exp-container
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top:4%;
+}
+.inc
+{
+    flex: 1;
+    border: 3.5px solid darkgreen;
+    padding: 1.5rem;
+    color: darkolivegreen;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    text-align: center;
+
+}
+.exp
+{
+    flex: 1;
+    border: 3.5px solid crimson;
+    padding: 1.5rem;
+    color: crimson;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    text-align: center;
+    margin-left: 2%;
+
+}
+#inc-incre
+{
+    margin-top:10%;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    font-weight:600 ;
+    letter-spacing: 1px;
+}
+#exp-decre
+{
+    margin-top:10%;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    font-weight:600 ;
+    letter-spacing: 1px;
+
+
+}
+.form-control
+{
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column;
+
+}
+#description,#amount
+{
+    margin-top: 3%;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bolder;
+    border: none;
+    background: var(--tertiary-color);
+    color: white;
+    border-radius:.5rem;
+    
+}
+#description::placeholder,#amount::placeholder
+{
+    font-weight: 100;
+}
+#btn
+{
+    border: none;
+    padding: .8rem;
+    font-weight: bolder;
+    background: #fbbe243a;
+    color:var(--tertiary-color);
+    box-shadow: 1px 1px 7px var(--tertiary-color);
+    transition: .5s ease-out;
+    cursor: pointer;
+    border-radius: 5rem;
+}
+#btn:hover
+{
+    transform: scale(.96);
+    opacity: .8;
+
+}
+.transactions
+{
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    background:var(--tertiary-color);
+
+
+}
+.transactions h3
+{
+    font-size: 1.6rem;
+    font-weight: bolder;
+    border-bottom: 1px solid grey;
+    padding: .5rem;
+    color: #ffffff8d;
+    text-align: center;
+}
+.trans
+{
+    list-style-type: none;
+    padding: 1rem;
+
+}
+#trans li
+{
+    border-radius: .2rem;
+    margin-top:2%;
+    margin-bottom: 10%;
+    background: var(--primary-color);
+    padding: 10px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    position: relative;
+    color: var(--link-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+    
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+#trans li span
+{
+    font-family: monospace;
+    font-size: 1rem;
+}
+#trans li:hover .btn-del
+{
+    opacity: .9;
+    display: block;
+
+}
+#trans li:hover
+{
+    opacity: .9;
+}
+.btn-del
+{
+    position: absolute;
+    left:97%;
+    top: -24%;
+    color: orangered;
+    background: #000;
+    border: none;
+    font-weight: bold;
+    transition: .6s ease-out;
+    display: none;
+    border-radius: 1rem;
+    opacity: .7;
+    cursor: pointer;
+}
+
+.income
+{
+    border-left: 4px solid green ;
+}
+.expense
+{
+    border-left: 4px solid crimson;
+}
+::-webkit-scrollbar {
+    width: 2px;
+  }
+::-webkit-scrollbar-track {
+    background-color: black;
+  }
+  
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+  }

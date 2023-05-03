@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPENSIFY</title>
+    <link rel="stylesheet" href="exp.css">
+    <script defer src="exp.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="details">
+            <h1 id="logo"><span class="span1">E</span>XPENSIFY</h1>
+            <br>
+            <h2 style="font-size:1.2rem;">Your Balance ~</h2>
+            <h3 id="balance"> ₹0.00</h3>
+
+            <div class="inc-exp-container">
+                <div class="inc">
+                    <h3>INCOME</h3>
+                    <p id="inc-incre">₹0.00</p>
+
+                </div>
+                <div class="exp">
+                    <h3>EXPENSE</h3>
+                    <p id="exp-decre">₹0.00</p>
+                </div>
+            </div>
+
+            <form id="form" action="#">
+                <div class="form-control">
+                
+                <h3><label for="description">DESCRIPTION : </label></h3>
+                <input type="text" name="" id="description" placeholder="Enter Description">
+            </div>
+          
+                <div class="form-control">
+                
+                    <h3><label for="amount">AMOUNT : </label></h3>
+                    <input type="number" name="" id="amount" placeholder="Enter Amount">
+                </div>
+                <div class="form-control">
+
+                    <button type="submit" id="btn">ADD TRANSACTION</button>
+                
+                </div>
+
+            </form>
+
+        </div>
+
+        <div class="transactions">
+
+            <h3>TRANSACTION HISTORY </h3>
+        
+    
+            <ul class="trans" id="trans">
+                <li id="expense" class="expense">BURGER<span>-2000</span>
+                <button class="btn-del">x</button></li>
+
+
+                <li id="income" class="income">SALARY<span>20000</span>
+                    <button onclick="func()" class="btn-del">x</button></li>
+                                            
+            
+                </ul>
+          
+
+        </div>
+    </div>
+    
+</body>
+</html>
